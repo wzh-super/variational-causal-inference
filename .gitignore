@@ -13,6 +13,10 @@ runs/
 data/
 saves/
 artifact/
+datasets/celebA-HQ
+datasets/morphomnist
+datasets/morphoMNIST
+datasets/cell
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
