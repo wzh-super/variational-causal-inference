@@ -47,7 +47,7 @@ def train(args, prepare=prepare, evaluate=evaluate):
     for epoch in range(args["max_epochs"]):
         epoch_training_stats = defaultdict(float)
 
-        for batch_idx, batch in enumerate(datasets["train_loader"]):
+        for batch_idx, batch in enumerate(tqdm(datasets["train_loader"], desc=f"Epoch {epoch}")):
             minibatch_training_stats = model.update(
                 move_tensors(*batch, device=device), batch_idx, writer
             )
